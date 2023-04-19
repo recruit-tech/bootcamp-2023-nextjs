@@ -1,5 +1,5 @@
+import { gssp } from "@/lib/next/gssp";
 import { Post, prisma } from "@/prisma";
-import { GetServerSideProps } from "next";
 import Link from "next/link";
 
 type Props = {
@@ -21,10 +21,10 @@ const Page = ({ posts }: Props) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getServerSideProps = gssp<Props>(async () => {
   // 📌:6-1 Postテーブルから全件取得
   const posts = await prisma.post.findMany();
   return { props: { posts } };
-};
+});
 
 export default Page;
