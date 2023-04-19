@@ -1,0 +1,12 @@
+{
+  "name": "bootcamp-2023-nextjs",
+  "private": true,
+  "workspaces": [
+    "packages/backend-api",
+    "packages/chapter-2",
+    "packages/chapter-3",
+    "packages/chapter-4",
+    "packages/chapter-5",
+    "packages/chapter-6"
+  ]
+}
