@@ -17,3 +17,6 @@ const Page = () => {
 };
 
 export default Page;
+
+// import loadsh from "lodash";
+// loadsh.filter([1, 2, 3], (item) => item > 1);
